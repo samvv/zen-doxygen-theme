@@ -1,8 +1,6 @@
 Zen Doxygen Theme
 =================
 
-🏗️ Theme is getting the finishing touches. Please stay tuned!
-
 This is a theme for Doxygen designed to be easy on the eyes and help you easily
 find what you are looking for. Developers spend a lot of time looking at
 documentation. The Zen theme hopes to make it a bit more pleasurable to sift
