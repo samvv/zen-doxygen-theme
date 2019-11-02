@@ -31,7 +31,8 @@ $code-fg-color: $black-color;
 $code-bg-color: $white-color;
 
 $link-color: lighten(#4665A2, 15%);
-$link-visited-color: lighten(#4665A2, 5%);
+$link-visited-color: lighten(#4665A2, 10%);
+$link-hover-color: lighten(#4665A2, 25%);
 
 $footer-fg-color: darken($white-color, 10%);
 $footer-bg-color: darken($black-color, 10%);
@@ -193,6 +194,7 @@ a {
 }
 
 a:hover {
+  color: $link-hover-color;
 	text-decoration: underline;
 }
 
@@ -823,11 +825,11 @@ span.mlabels {
 }
 
 span.mlabel {
-        background-color: #728DC1;
-        border-top:1px solid #5373B4;
-        border-left:1px solid #5373B4;
-        border-right:1px solid #C4CFE5;
-        border-bottom:1px solid #C4CFE5;
+  background-color: #728DC1;
+  border-top:1px solid #5373B4;
+  border-left:1px solid #5373B4;
+  border-right:1px solid #C4CFE5;
+  border-bottom:1px solid #C4CFE5;
 	text-shadow: none;
 	color: white;
 	margin-right: 4px;
@@ -845,10 +847,10 @@ span.mlabel {
 /* these are for tree view inside a (index) page */
 
 div.directory {
-        margin: 10px 0px;
-        border-top: 1px solid #9CAFD4;
-        border-bottom: 1px solid #9CAFD4;
-        width: 100%;
+  margin: 10px 0px;
+  // border-top: 1px solid #9CAFD4;
+  // border-bottom: 1px solid #9CAFD4;
+  width: 100%;
 }
 
 .directory table {
@@ -876,16 +878,11 @@ div.directory {
 }
 
 .directory td.desc {
-        width: 100%;
-        padding-left: 6px;
+  width: 100%;
+  padding-left: 6px;
 	padding-right: 6px;
 	padding-top: 3px;
-	border-left: 1px solid rgba(0,0,0,0.05);
-}
-
-.directory tr.even {
-	padding-left: 6px;
-	background-color: #F7F8FB;
+	// border-left: 1px solid rgba(0,0,0,0.05);
 }
 
 .directory img {
@@ -893,17 +890,22 @@ div.directory {
 }
 
 .directory .levels {
-        white-space: nowrap;
-        width: 100%;
-        text-align: right;
-        font-size: 9pt;
+  white-space: nowrap;
+  width: 100%;
+  text-align: right;
+  font-size: 9pt;
+  background-color: $table-bg-color;
 }
 
 .directory .levels span {
-        cursor: pointer;
-        padding-left: 2px;
-        padding-right: 2px;
-	color: #3D578C;
+  cursor: pointer;
+  padding-left: 2px;
+  padding-right: 2px;
+	color: $link-color;
+}
+
+.directory .levels span:hover {
+  color: $link-hover-color;
 }
 
 .arrow {
