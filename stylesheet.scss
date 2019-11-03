@@ -5,6 +5,7 @@ $white-color: #abb2bf;
 $magenta-color: #c678dd;
 $cyan-color: #56b6c2;
 $yellow-color: #e5c07b;
+$blue-color: #61afef;
 $gutter-color: #4b5263;
 
 // $code-font: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -27,7 +28,7 @@ $table-bg-color: lighten($black-color, 10%);
 $header-bg-color: lighten($black-color, 10%);
 
 $code-border-color: $gutter-color;
-$code-fg-color: $black-color;
+$code-fg-color: #5c6370;
 $code-bg-color: $white-color;
 
 $link-color: lighten(#4665A2, 15%);
@@ -220,9 +221,13 @@ a.el {
 a.elRef {
 }
 
-a.code, a.code:visited, a.line, a.line:visited {
+a.line, a.line:visited {
   color: $white-color; 
 }
+
+// a.code {
+//   color: $link-color;
+// }
 
 a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
   color: #4665A2; 
@@ -262,13 +267,14 @@ pre.fragment {
   word-wrap: break-word;
   font-size:  9pt;
   line-height: 125%;
-  font-family: monospace, fixed;
+  font-family: $code-font;
   font-size: 105%;
 }
 
 div.fragment {
-  padding: 0 0 1px 0; /*Fixed: last line underline overlap border*/
-  margin: 4px 8px 4px 2px;
+  // padding: 0 0 1px 0; [>Fixed: last line underline overlap border<]
+  // margin: 4px 8px 4px 2px;
+  padding: 0.5em;
   background-color: $code-bg-color;
   border: 1px solid $code-bg-color;
   color: $code-fg-color;
@@ -292,9 +298,9 @@ div.line {
   transition: 0.5s;
 }
 
-div.line:hover {
-  background-color: lighten($code-bg-color, 10%);
-}
+// div.line:hover {
+//   background-color: lighten($code-bg-color, 10%);
+// }
 
 div.line.glow {
   background-color: cyan;
@@ -439,11 +445,11 @@ span.keywordtype {
 }
 
 span.keywordflow {
-  color: #e08000
+  color: darken(#d19a66, 30%)
 }
 
 span.comment {
-  color: #800000
+  color: #5c6370
 }
 
 span.preprocessor {
